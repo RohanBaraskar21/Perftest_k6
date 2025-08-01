@@ -26,6 +26,8 @@ jobs:
           sudo apt-get install -y k6
       - name: Install dev dependencies
         run: npm ci
+      - name: Ensure results directory exists
+        run: mkdir -p results
       - name: Run k6 load test (Petstore)
         run: npm run petstore-load
       - name: Upload HTML and JSON reports
