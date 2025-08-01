@@ -1,0 +1,22 @@
+{
+  "name": "k6-performance-framework",
+  "version": "1.0.0",
+  "description": "Industry-standard performance testing framework using k6",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "petstore-load:k6": "k6 run --out json=results/petstore-load.json tests/load/petstore-load.js",
+    "petstore-load:report": "node report-generator.js results/petstore-load.json results/petstore-load.html",
+    "petstore-load": "npm run petstore-load:k6 && npm run petstore-load:report",
+    "reqres-load": "k6 run --out json=results/reqres-load.json tests/load/reqres.js && node report-generator.js results/reqres-load.json results/reqres-load.html",
+    "petstore-spike": "k6 run --out json=results/petstore-spike.json tests/spike/petstore.js && node report-generator.js results/petstore-spike.json results/petstore-spike.html",
+    "reqres-stress": "k6 run --out json=results/reqres-stress.json tests/stress/reqres.js && node report-generator.js results/reqres-stress.json results/reqres-stress.html",
+    "petstore-soak": "k6 run --out json=results/petstore-soak.json tests/soak/petstore.js && node report-generator.js results/petstore-soak.json results/petstore-soak.html"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}

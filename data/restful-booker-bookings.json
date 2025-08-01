@@ -1,0 +1,26 @@
+[
+  {
+    "firstname": "Jim",
+    "lastname": "Brown",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": { "checkin": "2025-08-01", "checkout": "2025-08-10" },
+    "additionalneeds": "Breakfast"
+  },
+  {
+    "firstname": "Sally",
+    "lastname": "Smith",
+    "totalprice": 222,
+    "depositpaid": false,
+    "bookingdates": { "checkin": "2025-08-05", "checkout": "2025-08-15" },
+    "additionalneeds": "Late Checkout"
+  },
+  {
+    "firstname": "John",
+    "lastname": "Doe",
+    "totalprice": 333,
+    "depositpaid": true,
+    "bookingdates": { "checkin": "2025-08-10", "checkout": "2025-08-20" },
+    "additionalneeds": "None"
+  }
+]
