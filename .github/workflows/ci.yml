@@ -29,6 +29,7 @@ jobs:
       - name: Run k6 load test (Petstore)
         run: npm run petstore-load
       - name: Upload HTML and JSON reports
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: k6-reports
